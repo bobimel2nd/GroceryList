@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Imel Grocery List</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+    <script src="groceries.js"></script>
+
+    <style>
+      .crossOut {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="SpacemanBob.png">
+      </div>
+      <div class="col-xs-9">
+        <div class="row">
+          <div class="col-xs-12"><h1>Grocery List</h1></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">New Item: <input id="item" type="text" ></div>
+          <div class="col-xs-6">
+            <button id="addNewItem">Add Item</button>
+            <button id="clearItems" class="crossOut">Clear</button>
+            <button id="clearAll">Clear All</button>
+          </div>
+        </div>
+        <hr>
+        <div id="allButtons"></div>
+      </div>
+    </div>
+
+    <!-- Grocery List displayed here -->
+    <hr>
+    <div id="allItems"></div>
+  </div>
+  </body>
+</html>
