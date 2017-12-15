@@ -105,16 +105,16 @@ $(document).ready(function() {
 	function showAllGroceries() {
 		$("#allItems").html("");
 		for (var i=0; i<groceryList.length; i++) {
-			if (i>0) $("#allItems").append(",&nbsp; ");
-			showGrocery(groceryList[i]);
+			showGrocery(groceryList[i], i<groceryList.length-1);
 		}
 	}
 
-	function showGrocery(name) {
+	function showGrocery(name, comma) {
 		var d = $("<div>");
 		d.addClass("groceryItem");
 		d.text(name);
 		$("#allItems").append(d);
+		if (comma) $("#allItems").append(",&nbsp;");
 		$("#item").val("");
 	}
 
