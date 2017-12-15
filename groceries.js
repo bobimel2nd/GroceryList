@@ -81,7 +81,6 @@ $(document).ready(function() {
 		btn.addClass("buttonItem")
 		btn.text(name);
 		$("#allButtons").append(btn);
-		$("#allButtons").append(" ");
 	}
 
 	function delButton(button) {
@@ -106,7 +105,7 @@ $(document).ready(function() {
 	function showAllGroceries() {
 		$("#allItems").html("");
 		for (var i=0; i<groceryList.length; i++) {
-			if (i>0) $("#allItems").append(", ");
+			if (i>0) $("#allItems").append(",&nbsp; ");
 			showGrocery(groceryList[i]);
 		}
 	}
