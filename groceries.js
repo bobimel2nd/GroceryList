@@ -106,15 +106,16 @@ $(document).ready(function() {
 	function showAllGroceries() {
 		$("#allItems").html("");
 		for (var i=0; i<groceryList.length; i++) {
+			if (i>0) $("#allItems").append(", ");
 			showGrocery(groceryList[i]);
 		}
 	}
 
 	function showGrocery(name) {
-		var p = $("<p>");
-		p.addClass("groceryItem");
-		p.text(" " + name);
-		$("#allItems").append(p);
+		var d = $("<div>");
+		d.addClass("groceryItem");
+		d.text(name);
+		$("#allItems").append(d);
 		$("#item").val("");
 	}
 
